@@ -1,0 +1,74 @@
+@import "../../node_modules/normalize-css/normalize.css";
+//@import "../assets/css/fontawesome.min.css";
+@import "./components/menu.scss";
+@import "./components/order_list.scss";
+@import "./components/navbar.scss";
+@import "./components/add_menu.scss";
+
+* {
+  font-family: "PT Sans", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  &--menu{
+    margin-top: 75px;
+    display: flex;
+  }
+}
+@media (max-width: 1200px){
+  .container{
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px){
+  .container{
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px){
+  .container{
+    max-width: none;
+  }
+  .navbar__search{
+    display: none;
+  }
+  .navbar__container{
+    justify-content: space-between;
+  }
+  .card{
+    flex-direction: column;
+    &__input{
+      margin-top: 15px;
+      padding-left: 0;
+    }
+  }
+  .photoframe{
+    border-radius: 15px;
+    max-width: 500px;
+    max-height: 500px;
+    &__image{
+      width: 100%;
+    }
+  }
+}
+::-webkit-scrollbar {
+  
+  height: 10px;
+  width: 5px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  
+  background: #d90404 * 0.9;
+  // -webkit-border-radius: 0;
+  // -webkit-box-shadow: 0px 1px 2px rgba(226, 19, 19, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #fff;
+}
